@@ -66,7 +66,7 @@ footer {
     align-items: flex-start;
 
     ul {
-        padding: 0 8px 12px 0;
+        padding: 0 16px 12px 0;
     }
 
     h3 {
@@ -77,6 +77,11 @@ footer {
     a {
         font-size: 12px;
         color: $primary-light-color;
+
+        &:hover {
+            color: $light-color;
+            text-decoration: underline;
+        }
     }
 }
 

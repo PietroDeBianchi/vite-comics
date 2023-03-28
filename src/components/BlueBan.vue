@@ -41,7 +41,7 @@ export default {
         <div id="container">
             <ul class="BlueCardlist">
                 <li class="BlueCard" v-for="(element, index) in BlueArray" :key="index">
-                    <a><img :src="getImagePath(element.path)" alt="">
+                    <a><img :src="getImagePath(element.path)" :alt="element.text" :class="['index-' + index]">
                         <span> {{ element.text }} </span></a>
                 </li>
             </ul>
@@ -65,14 +65,29 @@ export default {
 .BlueCard {
     color: $light-color;
     cursor: pointer;
+    padding: 8px;
+
+    &:hover {
+        text-decoration: underline;
+    }
 
     a {
         @include mixins.d-flex-between;
     }
+}
 
-    img {
-        width: 40px;
-        padding-right: 8px;
-    }
+img {
+    width: 40px;
+    padding-right: 8px;
+}
+
+.index-3 {
+    height: 32px;
+    width: auto;
+}
+
+.index-4 {
+    height: 25px;
+    width: auto;
 }
 </style>

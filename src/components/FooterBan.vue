@@ -38,19 +38,40 @@ export default {
 
 footer {
     background-color: $primary-color;
-    padding: 12px 0;
+    padding: 24px 0;
 }
 
 .FollowFooter {
     @include mixins.d-flex-between;
 
-    ul {
-        @include mixins.d-flex-between;
+    button {
+        font-size: 16px;
+        background-color: $primary-color;
+        color: $light-color;
+        border: 2px solid $secondary-color;
+        padding: 6px 8px;
+
+        &:hover {
+            background-color: $light-color;
+            color: $secondary-color;
+            border: 2px solid $secondary-color;
+        }
     }
 
     .follow {
         display: flex;
         align-items: center;
+
+        h4 {
+            font-size: 20px;
+            padding-right: 8px;
+            color: $secondary-color;
+        }
+    }
+
+    ul {
+        @include mixins.d-flex-between;
+        gap: 8px;
     }
 }
 </style>
