@@ -162,8 +162,17 @@ h4 {
     }
 
     h5 {
+        width: 80%;
+        margin: auto;
+        border: 1px solid $light-color;
         color: $light-color;
         font-size: 15px;
+        padding: 2px 0;
+
+        &:hover {
+            background-color: $light-color;
+            color: $primary-color;
+        }
     }
 }
 </style>
