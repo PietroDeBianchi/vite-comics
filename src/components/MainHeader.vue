@@ -31,6 +31,12 @@ export default {
 
 header {
     background-color: $light-color;
+
+    nav {
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+    }
 }
 
 #container {
@@ -40,20 +46,42 @@ header {
     img {
         width: 80%
     }
+
+    a {
+        position: relative;
+        align-self: stretch;
+    }
+
+    li::after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: $secondary-color;
+        transform: scaleX(0);
+        transition: transform 0.4s ease;
+    }
+
+    li:hover::after {
+        transform: scaleX(1);
+    }
 }
 
 .headerNavbar {
     @include mixins.d-flex-between;
+    gap: 12px;
 }
 
 .nav-element {
     font-size: 0.8rem;
     font-weight: 600;
-    padding: 0 10px;
     color: $primary-color;
 
     &:hover {
         color: $secondary-color;
     }
+
 }
 </style>
