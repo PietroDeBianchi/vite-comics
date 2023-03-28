@@ -43,7 +43,7 @@ header {
 }
 
 .nav-element {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 600;
     padding: 0 10px;
     color: $primary-color;

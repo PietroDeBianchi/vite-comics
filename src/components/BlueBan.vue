@@ -55,6 +55,8 @@ export default {
 
 .blueban {
     background-color: $secondary-color;
+    position: relative;
+    z-index: 999;
 }
 
 .BlueCardlist {
