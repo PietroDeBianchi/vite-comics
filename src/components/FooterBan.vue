@@ -66,6 +66,10 @@ footer {
             font-size: 20px;
             padding-right: 8px;
             color: $secondary-color;
+
+            &:hover {
+                color: $light-color;
+            }
         }
     }
 

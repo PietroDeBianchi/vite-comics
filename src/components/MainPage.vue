@@ -95,6 +95,7 @@ export default {
         <div id="ComicContainer">
             <div class="Comic" v-for="comic, index in ComicsList" :key="index">
                 <img :src="comic.thumb" :title="comic.series">
+                <h5>{{ comic.price }}</h5>
             </div>
         </div>
         <div>
@@ -151,11 +152,18 @@ h4 {
 
     .Comic {
         width: calc(100% / 6);
+        margin: 8px 0;
     }
 
     img {
         width: 80%;
-        margin: auto;
+        height: 240px;
+        object-fit: cover;
+    }
+
+    h5 {
+        color: $light-color;
+        font-size: 15px;
     }
 }
 </style>
