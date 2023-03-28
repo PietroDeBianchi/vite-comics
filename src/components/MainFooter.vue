@@ -84,9 +84,10 @@ footer {
     position: relative;
     height: 100%;
     width: 500px;
+    overflow-y: hidden;
 
     img {
-        position: absolute;
+        width: 100%;
         position: absolute;
         top: 50%;
         left: 50%;

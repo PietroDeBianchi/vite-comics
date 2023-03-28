@@ -22,8 +22,8 @@ export default {
   <MainHeader />
   <MainPage />
   <BlueBan />
-  <FooterBan />
   <MainFooter />
+  <FooterBan />
 </template>
 
 <style lang="scss">
