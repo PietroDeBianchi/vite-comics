@@ -1,5 +1,5 @@
 @use "./partials/mixins";
-@use "./partials/variables";
+@use "./partials/variables" as *;
 
 * {
     margin: 0;
@@ -9,6 +9,7 @@
 
 body {
     font-family: 'Manrope', sans-serif;
+    background-color: $primary-color;
 }
 
 #container {

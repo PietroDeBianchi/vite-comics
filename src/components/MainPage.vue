@@ -87,6 +87,75 @@ export default {
 };
 </script>
 
-<template></template>
+<template>
+    <div id="jumbotron">
+    </div>
+    <div id="container">
+        <h4>CURRENT SERIES</h4>
+        <div id="ComicContainer">
+            <div class="Comic" v-for="comic, index in ComicsList" :key="index">
+                <img :src="comic.thumb" :title="comic.series">
+            </div>
+        </div>
+        <div>
+            <button>LEARN MORE</button>
+        </div>
+    </div>
+</template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+@use "../styles/partials/mixins";
+@use "../styles/partials/variables" as *;
+
+#jumbotron {
+    position: relative;
+    height: 250px;
+    background-image: url("../assets/jumbotron.jpg");
+    background-size: cover;
+}
+
+
+#container {
+    position: relative;
+    height: 100%;
+    text-align: center;
+    padding: 24px 0;
+
+    button {
+        font-size: 16px;
+        background-color: $secondary-color;
+        color: $light-color;
+        padding: 6px 8px;
+        border: none;
+
+        &:hover {
+            background-color: $light-color;
+            color: $secondary-color;
+        }
+    }
+}
+
+h4 {
+    position: absolute;
+    padding: 8px;
+    height: 32px;
+    color: $light-color;
+    background-color: $secondary-color;
+    top: -16px;
+}
+
+#ComicContainer {
+    padding: 32px 0;
+    @include mixins.d-flex-between;
+    flex-wrap: wrap;
+
+    .Comic {
+        width: calc(100% / 6);
+    }
+
+    img {
+        width: 80%;
+        margin: auto;
+    }
+}
+</style>

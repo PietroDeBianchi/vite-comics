@@ -11,15 +11,17 @@ export default {
 </script>
 
 <template>
-    <header id="container">
-        <div><img src="../assets/dc-logo.png" alt="DC LOGO"></div>
-        <nav>
-            <ul class="headerNavbar">
-                <a v-for="(element) in navbar" href="#">
-                    <li class="nav-element" href="#"> {{ element }}</li>
-                </a>
-            </ul>
-        </nav>
+    <header>
+        <div id="container">
+            <div><img src="../assets/dc-logo.png" alt="DC LOGO"></div>
+            <nav>
+                <ul class="headerNavbar">
+                    <a v-for="(element) in navbar" href="#">
+                        <li class="nav-element" href="#"> {{ element }}</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
     </header>
 </template>
 
@@ -28,14 +30,16 @@ export default {
 @use "../styles/partials/variables" as *;
 
 header {
+    background-color: $light-color;
+}
+
+#container {
     @include mixins.d-flex-between;
     padding: 12px 0;
-    position: relative;
 
     img {
-        width: 80%;
+        width: 80%
     }
-
 }
 
 .headerNavbar {
