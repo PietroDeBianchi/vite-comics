@@ -11,8 +11,8 @@ export default {
 </script>
 
 <template>
-    <header>
-        <div><img src="../../public/dc-logo.png" alt="DC LOGO"></div>
+    <header id="container">
+        <div><img src="../assets/dc-logo.png" alt="DC LOGO"></div>
         <nav>
             <ul class="headerNavbar">
                 <a v-for="(element) in navbar" href="#">
@@ -28,7 +28,7 @@ export default {
 @use "../styles/partials/variables" as *;
 
 header {
-    @include mixins.d-flex-around;
+    @include mixins.d-flex-between;
     padding: 12px 0;
     position: relative;
 
@@ -39,7 +39,7 @@ header {
 }
 
 .headerNavbar {
-    @include mixins.d-flex-around;
+    @include mixins.d-flex-between;
 }
 
 .nav-element {

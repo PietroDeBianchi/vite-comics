@@ -1,6 +1,6 @@
-@mixin d-flex-around {
+@mixin d-flex-between {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
